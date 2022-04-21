@@ -25,14 +25,9 @@ function App() {
 
 
   return (
-  
-
-    <Box sx={{ flexGrow: 1 }}>
-    
-       
+    <Box className="container" sx={{ flexGrow: 1 }}>
        {articles ? <Rows data={articles}/> : <p>Loading...</p>}
     </Box>
-   
   );
 }
 
