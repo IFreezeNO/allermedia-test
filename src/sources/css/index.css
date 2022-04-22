@@ -16,7 +16,8 @@ code {
   background-color: #fff;
   margin: 5px;
   height: 250px;
-  cursor:pointer;
+  text-align: center;
+
 }
 .container {
   width: 80%;
@@ -27,12 +28,15 @@ figure {
   margin-block-end: 0em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  cursor:pointer;
+
 }
 .title {
-  text-align: center;
   font-weight: 700;
     letter-spacing: -0.03em;
     line-height: 1.05;
+    cursor:pointer;
+
 }
 #imgArticle {
   float: left;
@@ -40,9 +44,54 @@ figure {
 .hd-Image {
   width: 100%;
   height: 100px;
+  cursor:pointer;
+
+}
+.confirmBtn {
+  margin-left : 15px;
+  margin-top : 15px;
 }
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (min-device-width : 770px)   and (max-device-width : 1024px)  {
+  .model {
+    background-color: #fff;
+    margin-bottom: 5px;
+    height: auto;
+    padding-bottom: 9px;
+    display: block;
+    text-align: center;
+  }
+  article > figure {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  .hd-Image {
+    width: 100%;
+    height: 100px;
+  }
+  #imgArticle {
+    height: 100%;
+    width: 100%;
+    float: 0px;
+  }
+  .container {
+    width: 100vw;
+    margin: auto;
+  }
+  .title {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    overflow: initial;
+    height: auto;
+    word-wrap: break-word
+  }
+}
+
+@media only screen and (max-width: 769px) {
   /* For mobile phones: */
   .model {
     background-color: #fff;
