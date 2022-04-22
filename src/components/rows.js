@@ -1,16 +1,18 @@
 import Grid from "@mui/material/Grid";
 import React from "react";
 import "../sources/css/index.css";
-import '../sources/css/phone.css';
+import "../sources/css/phone.css";
 import aggregateArticles from "../hooks/aggregatingData";
 import screenSize from "../lib/design/screensize";
-import replaceTitle from "../hooks/replaceTitle";
+import ReplaceTitle from "../hooks/replaceTitle";
 import redirect from "../lib/web/redirect";
 import IconButton from "@mui/material/IconButton";
 import EditIcon from "@mui/icons-material/Edit";
 
 const Rows = ({ data }) => {
-  const [rows] = aggregateArticles(data);
+  aggregateArticles(data);
+
+  let rows = JSON.parse(localStorage.getItem("articleObjects"));
 
   if (rows.length === 0) {
     return <p>Loading...</p>;
@@ -19,9 +21,9 @@ const Rows = ({ data }) => {
   return (
     <>
       {rows?.length > 0
-        ? rows.map((row) => {
+        ? rows.map((row, index) => {
             return (
-              <Grid container key={row.rowId} spacing={2}>
+              <Grid container key={index} spacing={2}>
                 {row.map((column) => (
                   <Grid key={column.Id} item xs={column.width}>
                     <article className="model">
@@ -51,7 +53,7 @@ const Rows = ({ data }) => {
                         aria-label="Endre tittel"
                         color="primary"
                         onClick={() =>
-                          replaceTitle(column.Id, column.title, data)
+                          ReplaceTitle(column.Id, column.title, data)
                         }
                       >
                         <EditIcon fontSize="small" />

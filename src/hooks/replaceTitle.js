@@ -1,6 +1,8 @@
 import Swal from "sweetalert2";
 
-const replaceTitle = async (id, currentTitle, data) => {
+const ReplaceTitle = async (id, currentTitle, data) => {
+  let adjustedData = [];
+
   const { value: title } = await Swal.fire({
     title: "Skriv inn ny tittel",
     input: "text",
@@ -15,6 +17,8 @@ const replaceTitle = async (id, currentTitle, data) => {
     for (let i = 0; i < data.length; i++) {
       for (let j = 0; j < data[i].length; j++) {
         let columns = data[i][j].columns;
+        adjustedData.push(columns);
+
         for (let k = 0; k < columns.length; k++) {
           if (columns[k].Id === id) {
             columns[k].title = title;
@@ -23,7 +27,10 @@ const replaceTitle = async (id, currentTitle, data) => {
         }
       }
     }
+
+    localStorage.setItem("articleModified", true);
+    localStorage.setItem("articleObjects", JSON.stringify(adjustedData));
   }
 };
 
-export default replaceTitle;
+export default ReplaceTitle;
