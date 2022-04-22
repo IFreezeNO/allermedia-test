@@ -10,7 +10,6 @@ const FetchData = () => {
       .get("https://storage.googleapis.com/aller-structure-task/test_data.json")
       .then(function (response) {
         //insert data from API into useState
-
         setarticleData(response.data);
         setIsLoaded(true);
       })

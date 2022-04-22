@@ -1,22 +1,25 @@
-import './sources/css/index.css';
-import './sources/css/phone.css';
+import "./sources/css/index.css";
+import "./sources/css/phone.css";
 
-import Box from '@mui/material/Box';
-import Rows from './components/rows';
-import FetchData from './hooks/fetchApiData'
-import DeleteTitle from './components/deleteCustomTitle';
+import Box from "@mui/material/Box";
+import Rows from "./components/Rows";
+import FetchData from "./hooks/fetchApiData";
+import DeleteTitle from "./components/DeleteCustomTitle";
+import Header from "./components/Header";
+import Loading from "./lib/web/loading";
 
 function App() {
-
-  const [ isLoaded, articleData ] = FetchData()
+  const [isLoaded, articleData] = FetchData();
 
   return (
     <>
-    <Box className="container" sx={{ flexGrow: 1 }}>
-    {localStorage.getItem("articleModified") ? <DeleteTitle data={articleData}/> : null}
-       {isLoaded ? <Rows data={articleData}/> : <p>Loading...</p>}
-    </Box>
-
+      <Header />
+      <Box className="container" sx={{ flexGrow: 1 }}>
+        {localStorage.getItem("articleModified") ? (
+          <DeleteTitle data={articleData} />
+        ) : null}
+        {isLoaded ? <Rows data={articleData} /> : <Loading />}
+      </Box>
     </>
   );
 }

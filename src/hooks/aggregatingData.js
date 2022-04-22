@@ -1,4 +1,4 @@
-const aggregateArticles = (data) => {
+const AggregateArticles = (data) => {
   let rows = [];
   let columnId = 0;
   let rowId = 0;
@@ -20,4 +20,4 @@ const aggregateArticles = (data) => {
   }
 };
 
-export default aggregateArticles;
+export default AggregateArticles;

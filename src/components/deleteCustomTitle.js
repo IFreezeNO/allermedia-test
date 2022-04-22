@@ -2,10 +2,10 @@ import * as React from "react";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
 import Link from "@mui/material/Link";
-const DeleteTitle = () => {
+const DeleteCustomTitle = () => {
   return (
     <Alert severity="info">
-      <AlertTitle>Du har nå egendefinerte titler på artiklene</AlertTitle>
+      <AlertTitle>Du har egendefinerte titler på artiklene</AlertTitle>
       For å fjerne egendefinerte titler trykk{" "}
       <Link
         component="button"
@@ -20,4 +20,4 @@ const DeleteTitle = () => {
     </Alert>
   );
 };
-export default DeleteTitle;
+export default DeleteCustomTitle;

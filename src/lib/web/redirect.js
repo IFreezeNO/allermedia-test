@@ -1,6 +1,6 @@
-const redirect = (url) => {
+const Redirect = (url) => {
     window.location.href = url;
   };
   
-  export default redirect;
+  export default Redirect;
   

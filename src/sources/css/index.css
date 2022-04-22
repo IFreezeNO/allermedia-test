@@ -43,3 +43,11 @@ figure {
 	margin-left : 15px;
 	margin-top : 15px;
 }
+header {
+    height: auto;
+    background-color: #4f4f54;
+    text-align: center;
+    padding: 5px;
+	color: white;
+    margin-bottom: 50px
+}
