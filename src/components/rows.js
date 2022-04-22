@@ -1,6 +1,7 @@
 import Grid from "@mui/material/Grid";
 import React from "react";
 import "../sources/css/index.css";
+import '../sources/css/phone.css';
 import aggregateArticles from "../hooks/aggregatingData";
 import screenSize from "../lib/design/screensize";
 import replaceTitle from "../hooks/replaceTitle";

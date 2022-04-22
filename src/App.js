@@ -1,4 +1,6 @@
-import './sources/css/App.css';
+import './sources/css/index.css';
+import './sources/css/phone.css';
+
 import Box from '@mui/material/Box';
 import Rows from './components/rows';
 import FetchData from './hooks/fetchApiData'
