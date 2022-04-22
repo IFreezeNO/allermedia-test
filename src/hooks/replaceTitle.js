@@ -18,7 +18,6 @@ const ReplaceTitle = async (id, currentTitle, data) => {
       for (let j = 0; j < data[i].length; j++) {
         let columns = data[i][j].columns;
         adjustedData.push(columns);
-
         for (let k = 0; k < columns.length; k++) {
           if (columns[k].Id === id) {
             columns[k].title = title;

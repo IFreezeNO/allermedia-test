@@ -8,6 +8,7 @@ import ReplaceTitle from "../hooks/replaceTitle";
 import redirect from "../lib/web/redirect";
 import IconButton from "@mui/material/IconButton";
 import EditIcon from "@mui/icons-material/Edit";
+import Tooltip from '@mui/material/Tooltip';
 
 const Rows = ({ data }) => {
   aggregateArticles(data);
@@ -49,6 +50,7 @@ const Rows = ({ data }) => {
                       >
                         {column.title}
                       </span>
+                      <Tooltip title="Endre tittelen">
                       <IconButton
                         aria-label="Endre tittel"
                         color="primary"
@@ -58,6 +60,7 @@ const Rows = ({ data }) => {
                       >
                         <EditIcon fontSize="small" />
                       </IconButton>
+                      </Tooltip>
                     </article>
                   </Grid>
                 ))}
