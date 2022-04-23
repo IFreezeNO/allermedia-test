@@ -2,11 +2,11 @@ import "./sources/css/index.css";
 import "./sources/css/phone.css";
 
 import Box from "@mui/material/Box";
-import Rows from "./components/Rows";
-import FetchData from "./hooks/fetchApiData";
-import DeleteTitle from "./components/DeleteCustomTitle";
-import Header from "./components/Header";
-import Loading from "./lib/web/loading";
+import Rows from "./components/Rows.js";
+import FetchData from "./hooks/fetchApiData.js";
+import DeleteTitle from "./components/DeleteCustomTitle.js";
+import Header from "./components/Header.js";
+import Loading from "./lib/web/loading.js";
 
 function App() {
   const [isLoaded, articleData] = FetchData();

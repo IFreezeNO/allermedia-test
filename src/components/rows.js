@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid";
 import React from "react";
-import aggregateArticles from "../hooks/aggregatingData";
-import Thumbnail from "./Thumbnail";
+import aggregateArticles from "../hooks/aggregatingData.js";
+import Thumbnail from "./Thumbnail.js";
 
 const Rows = ({ data }) => {
   aggregateArticles(data);
