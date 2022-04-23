@@ -1,6 +1,6 @@
 import screenSize from "../lib/design/screensize";
 import redirect from "../lib/web/redirect";
-import ThumbnailBtn from "./articleBtn";
+import ThumbnailBtn from "./ArticleBtn";
 
 const Thumbnail = ({ imageUrl, title, id, url, data }) => {
   return (
