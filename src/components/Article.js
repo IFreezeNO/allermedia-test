@@ -1,3 +1,5 @@
+//Article design 
+
 import screenSize from "../lib/design/screensize";
 import redirect from "../lib/web/redirect";
 import ThumbnailBtn from "./ArticleBtn";

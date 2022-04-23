@@ -1,3 +1,5 @@
+//Fetching the data from the Aller media API and sending it to Rows. If there is a title who is modified it will show an alert box so they can delete the user defined text. 
+
 import "./sources/css/index.css";
 import "./sources/css/phone.css";
 

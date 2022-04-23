@@ -1,5 +1,6 @@
-import Swal from "sweetalert2";
+//Replacing title with a user input title
 
+import Swal from "sweetalert2";
 
 const ReplaceTitle = async (id, currentTitle, data) => {
   let adjustedData = [];
@@ -28,8 +29,8 @@ const ReplaceTitle = async (id, currentTitle, data) => {
         }
       }
     }
-    console.log(data)
 
+    console.log(data)
 
     localStorage.setItem("articleModified", true);
     localStorage.setItem("articleObjects", JSON.stringify(adjustedData));

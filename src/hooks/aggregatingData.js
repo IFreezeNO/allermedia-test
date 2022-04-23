@@ -1,3 +1,5 @@
+//Aggregating data from Rows.js 
+
 const AggregateArticles = (data) => {
   let rows = [];
   let columnId = 0;

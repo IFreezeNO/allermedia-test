@@ -1,3 +1,5 @@
+// Retrieving data from App.js and inserting the data to the thumbnail after aggregating data.
+
 import Grid from "@mui/material/Grid";
 import React from "react";
 import aggregateArticles from "../hooks/aggregatingData";
