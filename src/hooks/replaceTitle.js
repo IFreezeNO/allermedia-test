@@ -11,7 +11,7 @@ const ReplaceTitle = async (id, currentTitle, data) => {
     confirmButtonText: "Endre tittel",
     inputPlaceholder: currentTitle,
   });
-  if (title.length > 3) {
+  if (title.length > 3 && title.length < 110) {
     Swal.fire({
       icon: "success",
       text: `Ny tittel: ${title}`,
@@ -37,7 +37,7 @@ const ReplaceTitle = async (id, currentTitle, data) => {
   } else {
     Swal.fire({
       icon: "error",
-      text: 'Tittelen må være lenger enn 3 karakterer',
+      text: 'Tittelen må være mellom 3 og 150 karakterer',
     });
   }
  
