@@ -2,6 +2,10 @@
 
 This project is a test site for Aller media.
 
+### Live demo
+
+Live demo of the webpage: [https://allermedia-test.vercel.app/](https://allermedia-test.vercel.app/)
+
 ## How to run the project
 
 In the project directory, you can run:
@@ -24,8 +28,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-### Live demo
 
-Live demo of the webpage: [https://allermedia-test.vercel.app/](https://allermedia-test.vercel.app/)
 
 
