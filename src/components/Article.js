@@ -22,7 +22,7 @@ const Thumbnail = ({ imageUrl, title, id, url, data }) => {
         </figure>
       </div>
 
-      <h3 className={`title ${id}`} tabindex={id} onClick={() => redirect(url)}>
+      <h3 className={`title ${id}`} tabindex={id + 1} onClick={() => redirect(url)}>
         {title}
       </h3>
       
