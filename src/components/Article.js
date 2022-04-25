@@ -10,7 +10,6 @@ const Thumbnail = ({ imageUrl, title, id, url, data }) => {
       <div className="top-row" onClick={() => redirect(url)}>
         <figure>
           <img
-            ariaLabel={`Image:  ${title}`}
             src={
               screenSize(400)
                 ? `${imageUrl}&height=150&width=150`
@@ -18,12 +17,13 @@ const Thumbnail = ({ imageUrl, title, id, url, data }) => {
             }
             alt={title}
             title={title}
+            ariaLabel={`Image:  ${title}`}
             id={`imgArticle ${id}`}
           />
         </figure>
       </div>
 
-      <h3 className={`title ${id}`} tabindex={id} ariaLabel={title}  onClick={() => redirect(url)}>
+      <h3 className={`title ${id}`} tabindex={id - 1} ariaLabel={title}  onClick={() => redirect(url)}>
         {title}
       </h3>
       
