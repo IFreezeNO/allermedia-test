@@ -35,7 +35,7 @@ figure {
 	cursor: pointer;
     font-size: 16px
 }
-#imgArticle {
+.imgArticle {
 	float: left;
 }
 .top-row {
