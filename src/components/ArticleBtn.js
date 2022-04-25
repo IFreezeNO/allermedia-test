@@ -11,7 +11,7 @@ const ThumbnailBtn = ({ id, title, data }) => {
       <IconButton
         aria-label="Endre tittel"
         color="primary"
-        KeyboardButtonProps={{ tabIndex: "-1" }}
+        tabIndex={-1}
         onClick={() => ReplaceTitle(id, title, data)}
       >
         <EditIcon fontSize="small" />
