@@ -1,6 +1,6 @@
 /* CSS for phone and small computer screen to make it more responsive */
 
-@media only screen and (min-device-width : 770px) and (max-device-width : 1399px) {
+@media only screen and (min-width : 770px) and (max-width : 1399px) {
 	.model {
 		background-color: #fff;
 		margin-bottom: 5px;
@@ -22,7 +22,7 @@
 	#imgArticle {
 		height: 100%;
 		width: 100%;
-		float: 0px;
+		float: left;
 	}
 	.container {
 		width: 75vw;
@@ -60,7 +60,7 @@
 	#imgArticle {
 		height: 100%;
 		width: 100%;
-		float: 0px;
+		float: left;
 	}
 	.container {
 		width: 100vw;
