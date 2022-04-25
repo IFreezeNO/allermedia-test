@@ -5,6 +5,8 @@ import redirect from "../lib/web/redirect";
 import ArticleBtn from "./ArticleBtn";
 
 const Thumbnail = ({ imageUrl, title, id, url, data }) => {
+  let tabindexCounter = 2;
+
   return (
     <article className="model">
       <div className="top-row" onClick={() => redirect(url)}>
@@ -22,7 +24,7 @@ const Thumbnail = ({ imageUrl, title, id, url, data }) => {
         </figure>
       </div>
 
-      <h3 className={`title ${id}`} tabindex={id + 1} onClick={() => redirect(url)}>
+      <h3 className={`title ${id}`} tabindex={tabindexCounter++} onClick={() => redirect(url)}>
         {title}
       </h3>
       
