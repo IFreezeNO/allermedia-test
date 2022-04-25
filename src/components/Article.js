@@ -2,7 +2,7 @@
 
 import screenSize from "../lib/design/screensize";
 import redirect from "../lib/web/redirect";
-import ThumbnailBtn from "./ArticleBtn";
+import ArticleBtn from "./ArticleBtn";
 
 const Thumbnail = ({ imageUrl, title, id, url, data }) => {
   return (
@@ -24,7 +24,7 @@ const Thumbnail = ({ imageUrl, title, id, url, data }) => {
       <span className={`title ${id}`} onClick={() => redirect(url)}>
         {title}
       </span>
-      <ThumbnailBtn id={id} title={title} data={data} />
+      <ArticleBtn id={id} title={title} data={data} />
     </article>
   );
 };

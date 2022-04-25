@@ -3,7 +3,7 @@
 import Grid from "@mui/material/Grid";
 import React from "react";
 import aggregateArticles from "../hooks/aggregatingData";
-import Thumbnail from "./Article";
+import Article from "./Article";
 
 const Rows = ({ data }) => {
   aggregateArticles(data);
@@ -18,7 +18,7 @@ const Rows = ({ data }) => {
               <Grid container key={index} spacing={2}>
                 {row.map((column) => (
                   <Grid key={column.Id} item xs={column.width}>
-                    <Thumbnail
+                    <Article
                       imageUrl={column.imageUrl}
                       title={column.title}
                       url={column.url}
