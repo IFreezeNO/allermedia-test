@@ -16,6 +16,7 @@ const Thumbnail = ({ imageUrl, title, id, url, data }) => {
                 : `${imageUrl}&height=250&width=200`
             }
             alt={title}
+            title={title}
             id="imgArticle"
           />
         </figure>
