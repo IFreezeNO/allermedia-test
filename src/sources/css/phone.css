@@ -60,6 +60,7 @@
 	#imgArticle {
 		height: 100%;
 		width: 100%;
+		float: left;
 	}
 	.container {
 		width: 100vw;

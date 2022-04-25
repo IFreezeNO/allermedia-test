@@ -18,12 +18,12 @@ const Thumbnail = ({ imageUrl, title, id, url, data }) => {
             alt={title}
             title={title}
             ariaLabel={`Image:  ${title}`}
-            id={`imgArticle ${id}`}
+            id={`imgArticle`}
           />
         </figure>
       </div>
 
-      <h3 className={`title ${id}`} tabindex={id - 1} ariaLabel={title}  onClick={() => redirect(url)}>
+      <h3 className={`title ${id}`} tabindex={id} ariaLabel={title}  onClick={() => redirect(url)}>
         {title}
       </h3>
       
