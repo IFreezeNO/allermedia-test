@@ -7,7 +7,7 @@ import ArticleBtn from "./ArticleBtn";
 const Thumbnail = ({ imageUrl, title, id, url, data }) => {
   return (
     <article className="model">
-      <div className="hd-Image" onClick={() => redirect(url)}>
+      <div className="top-row" onClick={() => redirect(url)}>
         <figure>
           <img
             src={
