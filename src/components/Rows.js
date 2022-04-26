@@ -6,10 +6,9 @@ import aggregateArticles from "../hooks/aggregatingData";
 import Article from "./Article";
 
 const Rows = ({ data }) => {
-
   if (!localStorage.getItem("articleModified")) {
     aggregateArticles(data);
-  } 
+  }
 
   let rows = JSON.parse(localStorage.getItem("articleObjects"));
   return (
