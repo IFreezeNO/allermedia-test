@@ -3,7 +3,7 @@
 const Header = () => {
     return (
       <header>
-        <h1 tabindex={1}>Nyheter</h1>
+        <h1 tabIndex={1}>Nyheter</h1>
       </header>
     );
   };

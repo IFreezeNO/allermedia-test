@@ -1,6 +1,7 @@
 //Replacing title with a user input title
 
 import Swal from "sweetalert2";
+import useState from "react";
 
 const ReplaceTitle = async (id, currentTitle, data) => {
   let adjustedData = [];
@@ -16,8 +17,21 @@ const ReplaceTitle = async (id, currentTitle, data) => {
       icon: "success",
       text: `Ny tittel: ${title}`,
     });
-    
-    for (let i = 0; i < data.length; i++) {
+    if(localStorage.getItem("articleModified")){
+      console.log(data  )
+      for (let i = 0; i < data.length; i++) {
+        for (let j = 0; j < data[i].length; j++) {
+          console.log(data[i][j])
+          if (data[i][j].Id === id) {
+            data[i][j].title = title;    
+            document.getElementsByClassName(`title ${id}`)[0].innerHTML = title;
+          }
+        }
+        }
+        localStorage.setItem("articleObjects", JSON.stringify(data));
+    }
+    else {
+      for (let i = 0; i < data.length; i++) {
       for (let j = 0; j < data[i].length; j++) {
         let columns = data[i][j].columns;
         adjustedData.push(columns);
@@ -28,12 +42,15 @@ const ReplaceTitle = async (id, currentTitle, data) => {
           }
         }
       }
+      }
+      localStorage.setItem("articleModified", true);
+      localStorage.setItem("articleObjects", JSON.stringify(adjustedData));
+      console.log(adjustedData);
+      window.location.reload();
+
     }
 
-    console.log(data)
 
-    localStorage.setItem("articleModified", true);
-    localStorage.setItem("articleObjects", JSON.stringify(adjustedData));
   } else {
     Swal.fire({
       icon: "error",
