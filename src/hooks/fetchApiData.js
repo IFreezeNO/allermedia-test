@@ -8,23 +8,25 @@ const FetchData = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    axios
-      .get("https://storage.googleapis.com/aller-structure-task/test_data.json")
-      .then(function (response) {
-        //insert data from API into useState
-        setIsLoaded(true);
-        if (localStorage.getItem("articleModified")) {
-          setarticleData(JSON.parse(localStorage.getItem("articleObjects")));
-        } else {
+    if (localStorage.getItem("articleModified")) {
+      setIsLoaded(true);
+      setarticleData(JSON.parse(localStorage.getItem("articleObjects")));
+    } else {
+      axios
+        .get(
+          "https://storage.googleapis.com/aller-structure-task/test_data.json"
+        )
+        .then(function (response) {
+          //insert data from API into useState
+          setIsLoaded(true);
           setarticleData(response.data);
-        }
-      })
-      .catch(function (error) {
-        // error
-        console.log(error);
-      });
+        })
+        .catch(function (error) {
+          // error
+          console.log(error);
+        });
+    }
   }, []);
-
   return [isLoaded, articleData];
 };
 
