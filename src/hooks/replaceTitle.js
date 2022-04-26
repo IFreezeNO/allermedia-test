@@ -25,6 +25,7 @@ const ReplaceTitle = async (id, currentTitle, data) => {
       let titleReplacement = replaceTitleFirstTime(id, title, data);
       localStorage.setItem("articleModified", true);
       localStorage.setItem("articleObjects", JSON.stringify(titleReplacement));
+      window.location.reload();
     }
   } else {
     Swal.fire({
