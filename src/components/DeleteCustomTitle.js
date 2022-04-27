@@ -8,7 +8,7 @@ const DeleteCustomTitle = () => {
   return (
     <Alert severity="info">
       <AlertTitle>Du har egendefinerte titler på artiklene</AlertTitle>
-      For å fjerne egendefinerte titler trykk{" "}
+      I denne modusen vil ikke applikasjonen hente inn nye artikler før egendefinerte titler er fjernet.  Trykk{" "}
       <Link
         component="button"
         variant="body2"
@@ -19,6 +19,7 @@ const DeleteCustomTitle = () => {
       >
         her
       </Link>
+      {" "} for å fjerne titlene.
     </Alert>
   );
 };
